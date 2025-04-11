@@ -1,0 +1,15 @@
+<h1>Add Profile</h1>
+
+
+
+<%= form_with model: @profile do |profile| %>
+<input type="hidden" name="id" value="<%=params[:id]%>">
+<%= profile.label :age%>
+<%= profile.text_field :age%><br><br>
+
+<%= profile.label :designation%>
+<%= profile.text_field :designation%><br><br>
+
+<%= profile.submit%>
+
+<%end%>

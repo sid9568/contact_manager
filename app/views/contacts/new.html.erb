@@ -1,0 +1,23 @@
+<div style="width: 80%; margin: auto;">
+
+<h1>Add Contacts</h1>
+
+<%= form_with model: @contact do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %><br><br>
+
+	<%= f.label :phone %>
+	<%= f.text_field :phone %><br><br>
+
+	<%= f.label :email %>
+	<%= f.text_field :email %><br><br>
+
+	<%= f.label :address %>
+	<%= f.text_field :address %><br><br>
+
+	<%=f.submit%>
+
+<%end%>
+
+</div>

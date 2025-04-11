@@ -1,0 +1,60 @@
+<div style="width: 90%; margin: auto;">
+
+<h1>Contacts List</h1>
+
+<%= link_to "Add", new_contact_path, style:"font-size: 25px;"%><br><br>
+
+<table>
+
+	<thead>
+		<tr>
+			<th>
+				Id
+			</th>
+			<th>
+				Name
+			</th>
+			<th>
+				Phone
+			</th>
+			<th>
+				Email
+			</th>
+			<th>
+				Address
+			</th>
+			<th>
+				Action
+			</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @contacts.each do |contact| %>
+
+		<tr>
+			<td>
+			  <%= contact.id%>	
+			</td>
+			<td>
+			  <%= contact.name%>	
+			</td>
+			<td>
+			  <%= contact.phone%>	
+			</td>
+			<td>
+			  <%= contact.email%>	
+			</td>
+			<td>
+			  <%= contact.address%>	
+			</td>
+			<td style="display: flex; gap: 10px;">
+			  <%= link_to "Edit", edit_contact_path(id: contact.id)%>
+			  <%= button_to "Delete",contact , method: :delete, data: { turbo_confirm: "Are You sure" }%>
+			  <%= link_to "Add Profile", new_profile_path(id: contact.id) %>
+			</td>
+		</tr>
+		<%end%>
+	</tbody>
+</table>
+</div>
