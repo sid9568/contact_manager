@@ -32,12 +32,22 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repo:
 
 ```bash
-git clone https://github.com/your-username/your-project-name.git
-cd your-project-name
+  npm install my-project
+  cd my-project
+```
+    
+Rails databse Create
+```bash
+  cd my-project
+```
 
-bundle install
-yarn install # if needed
+    
+Rails databse migrate
+```bash
+  cd my-project
+```
 
-rails db:create
-rails db:migrate
-rails db:seed # optional
+Rails databse migrate
+```bash
+  cd my-project
+```
